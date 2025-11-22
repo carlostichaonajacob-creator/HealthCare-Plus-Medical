@@ -1,0 +1,182 @@
+# HealthCare Plus Medical Centre Website
+
+A modern, responsive medical practice website built for Dr. Sarah Mitchell at HealthCare Plus Medical Centre. This project showcases a professional healthcare website with clean design, smooth animations, and full mobile responsiveness.
+
+![HealthCare Plus Preview](https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?w=800)
+
+## 🌐 Live Demo
+
+[View Live Site](https://your-project-name.vercel.app)
+
+## ✨ Features
+
+- **Fully Responsive Design** - Works flawlessly on all devices (320px to 1920px+)
+- **Modern UI/UX** - Clean, professional healthcare aesthetic
+- **Smooth Animations** - Subtle transitions and scroll-based animations
+- **Accessibility Ready** - WCAG compliant with reduced motion support
+- **Fast Performance** - Optimized for Core Web Vitals
+- **SEO Friendly** - Semantic HTML and meta tags
+
+## 📄 Pages
+
+| Page | Description |
+|------|-------------|
+| `index.html` | Homepage with hero, about, services, and contact sections |
+| `privacy.html` | Privacy Policy page |
+| `terms.html` | Terms of Service page |
+| `appointment.html` | Appointment booking page (if applicable) |
+
+## 🛠️ Tech Stack
+
+- **HTML5** - Semantic markup
+- **CSS3** - Custom properties, Flexbox, Grid, animations
+- **JavaScript** - Vanilla JS for interactions
+- **Font Awesome 6.4** - Icons
+- **Google Fonts** - Poppins typeface
+
+## 🎨 Design System
+
+### Colors
+```css
+--brand-deep: #005C65;    /* Deep teal */
+--brand-primary: #008487; /* Primary teal */
+--accent: #D87C7C;        /* Coral accent */
+--neutral-50: #F7F7F5;    /* Light background */
+--neutral-900: #444444;   /* Dark text */
+```
+
+### Typography
+- **Font Family:** Poppins (400, 500, 600, 700)
+- **Base Size:** 16px
+- **Line Height:** 1.6 - 1.8
+
+## 🚀 Deployment
+
+This site is configured for deployment on [Vercel](https://vercel.com).
+
+### Deploy to Vercel
+
+1. Fork or clone this repository
+2. Import project to Vercel
+3. Deploy automatically
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/yourusername/healthcare-plus)
+
+### Manual Deployment
+
+```bash
+# Install Vercel CLI
+npm install -g vercel
+
+# Login to Vercel
+vercel login
+
+# Deploy
+vercel
+```
+
+## 📁 Project Structure
+
+```
+healthcare-plus/
+├── index.html          # Main homepage
+├── privacy.html        # Privacy policy
+├── terms.html          # Terms of service
+├── appointment.html    # Booking page (optional)
+├── assets/
+│   ├── css/
+│   │   └── style.css   # Main stylesheet (if external)
+│   ├── js/
+│   │   └── script.js   # Main JavaScript (if external)
+│   └── images/         # Local images (if any)
+├── vercel.json         # Vercel configuration
+├── README.md           # This file
+├── LICENSE             # MIT License
+└── .gitignore          # Git ignore rules
+```
+
+## ⚙️ Configuration
+
+### Vercel Settings
+- **Framework Preset:** Other (Static HTML)
+- **Build Command:** None required
+- **Output Directory:** ./
+- **Install Command:** None required
+
+## 🔧 Local Development
+
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/healthcare-plus.git
+cd healthcare-plus
+```
+
+2. Open with Live Server or any local server:
+```bash
+# Using Python
+python -m http.server 8000
+
+# Using Node.js (npx)
+npx serve
+
+# Or simply open index.html in your browser
+```
+
+3. Visit `http://localhost:8000`
+
+## 📱 Browser Support
+
+- Chrome (last 2 versions)
+- Firefox (last 2 versions)
+- Safari (last 2 versions)
+- Edge (last 2 versions)
+- iOS Safari
+- Android Chrome
+
+## ♿ Accessibility
+
+- Semantic HTML structure
+- ARIA labels where needed
+- Keyboard navigation support
+- Focus visible states
+- Reduced motion media query support
+- Color contrast compliant
+
+## 📈 Performance
+
+- No external CSS frameworks
+- Minimal JavaScript
+- Optimized images (external CDN)
+- Font display swap
+- Lazy loading ready
+
+## 🤝 Contributing
+
+This is a portfolio project, but suggestions are welcome!
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/improvement`)
+3. Commit your changes (`git commit -am 'Add new feature'`)
+4. Push to the branch (`git push origin feature/improvement`)
+5. Open a Pull Request
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 👤 Author
+
+**Your Name**
+- Portfolio: [yourportfolio.com](https://yourportfolio.com)
+- GitHub: [@yourusername](https://github.com/yourusername)
+- LinkedIn: [Your Name](https://linkedin.com/in/yourprofile)
+
+## 🙏 Acknowledgments
+
+- Images from [Unsplash](https://unsplash.com)
+- Icons from [Font Awesome](https://fontawesome.com)
+- Fonts from [Google Fonts](https://fonts.google.com)
+
+---
+
+⭐ If you found this project helpful, please give it a star!

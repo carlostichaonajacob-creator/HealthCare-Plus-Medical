@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Terms of Service for HealthCare Plus Medical Centre - Terms and conditions for using our services">
+    <title>Terms of Service - Dr Sarah Mitchell | HealthCare Plus Medical Centre</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+        :root {
+            --brand-deep: #005C65;
+            --brand-primary: #008487;
+            --accent: #D87C7C;
+            --neutral-50: #F7F7F5;
+            --neutral-100: #EEEEEC;
+            --neutral-700: #767676;
+            --neutral-900: #444444;
+            --surface: #FFFFFF;
+            --shadow: 0 4px 16px rgba(0,0,0,0.1);
+            --shadow-lg: 0 8px 32px rgba(0,0,0,0.15);
+            --transition: 0.3s ease;
+            --radius: 12px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            line-height: 1.8;
+            color: var(--neutral-900);
+            background: var(--neutral-50);
+        }
+
+        a { color: var(--brand-primary); text-decoration: none; transition: var(--transition); }
+        a:hover { color: var(--brand-deep); }
+
+        /* Progress Bar */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--brand-primary), var(--accent));
+            z-index: 1001;
+            transition: width 0.1s ease;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(12px);
+            box-shadow: var(--shadow);
+            z-index: 1000;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 24px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--brand-deep);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .logo i { color: var(--brand-primary); animation: pulse 2s ease-in-out infinite; }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: var(--transition);
+            border: 2px solid var(--neutral-100);
+            background: transparent;
+            color: var(--neutral-900);
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            border-color: var(--brand-primary);
+            color: var(--brand-primary);
+            transform: translateX(-4px);
+        }
+
+        /* Main Content */
+        main {
+            margin-top: 80px;
+            padding: 60px 24px;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+            min-height: calc(100vh - 220px);
+        }
+
+        /* Page Header */
+        .page-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .page-header h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            color: var(--brand-deep);
+            margin-bottom: 16px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .page-header h1::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--brand-primary), var(--accent));
+            border-radius: 2px;
+        }
+
+        .page-header .last-updated {
+            color: var(--neutral-700);
+            font-size: 0.95rem;
+            margin-top: 16px;
+            font-style: italic;
+        }
+
+        .page-header .intro {
+            color: var(--neutral-700);
+            font-size: 1.05rem;
+            max-width: 700px;
+            margin: 24px auto 0;
+            line-height: 1.7;
+        }
+
+        /* TOC */
+        .toc-container {
+            background: var(--surface);
+            padding: 32px;
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+            margin-bottom: 40px;
+            border-left: 4px solid var(--brand-primary);
+        }
+
+        .toc-container h2 {
+            font-size: 1.5rem;
+            color: var(--brand-deep);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .toc-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 12px;
+        }
+
+        .toc-list li { transition: transform var(--transition); }
+        .toc-list li:hover { transform: translateX(8px); }
+
+        .toc-list a {
+            color: var(--neutral-900);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 12px;
+            border-radius: 8px;
+            transition: all var(--transition);
+        }
+
+        .toc-list a:hover { background: var(--neutral-50); color: var(--brand-primary); }
+        .toc-list a i { color: var(--brand-primary); font-size: 0.8rem; }
+
+        /* Content */
+        .content-container {
+            background: var(--surface);
+            padding: 48px;
+            border-radius: 20px;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .section {
+            margin-bottom: 48px;
+            scroll-margin-top: 100px;
+        }
+
+        .section:last-child { margin-bottom: 0; }
+
+        .section h2 {
+            font-size: 1.8rem;
+            color: var(--brand-deep);
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--neutral-100);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .section-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(135deg, var(--brand-primary), var(--brand-deep));
+            color: white;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 700;
+        }
+
+        .section h3 {
+            font-size: 1.3rem;
+            color: var(--brand-primary);
+            margin: 24px 0 16px 0;
+        }
+
+        .section p { margin-bottom: 16px; }
+
+        .section ul, .section ol {
+            margin: 16px 0 16px 24px;
+        }
+
+        .section li { margin-bottom: 12px; }
+        .section li::marker { color: var(--brand-primary); }
+
+        /* Info Cards */
+        .info-cards {
+            display: grid;
+            gap: 12px;
+            margin: 24px 0;
+        }
+
+        .info-card {
+            background: var(--neutral-50);
+            padding: 20px 24px;
+            border-radius: 12px;
+            border-left: 4px solid var(--brand-primary);
+            transition: var(--transition);
+        }
+
+        .info-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+
+        .info-card-title {
+            font-weight: 600;
+            color: var(--brand-deep);
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .info-card-title i { color: var(--brand-primary); }
+        .info-card p { margin: 0; color: var(--neutral-700); }
+
+        /* Notice Boxes */
+        .notice-box, .warning-box, .success-box {
+            padding: 20px 24px;
+            border-radius: 12px;
+            margin: 24px 0;
+            border-left: 4px solid;
+        }
+
+        .notice-box {
+            background: linear-gradient(135deg, rgba(0,132,135,0.08), rgba(0,92,101,0.05));
+            border-color: var(--brand-primary);
+        }
+
+        .warning-box {
+            background: linear-gradient(135deg, rgba(216,124,124,0.08), rgba(193,106,106,0.05));
+            border-color: var(--accent);
+        }
+
+        .success-box {
+            background: linear-gradient(135deg, rgba(16,185,129,0.08), rgba(5,150,105,0.05));
+            border-color: #10b981;
+        }
+
+        .notice-box strong, .warning-box strong, .success-box strong {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+
+        .notice-box strong { color: var(--brand-deep); }
+        .notice-box strong i { color: var(--brand-primary); }
+        .warning-box strong { color: var(--accent); }
+        .warning-box strong i { color: var(--accent); }
+        .success-box strong { color: #059669; }
+        .success-box strong i { color: #10b981; }
+
+        .notice-box p, .warning-box p, .success-box p { margin: 0; }
+
+        /* Contact Box */
+        .contact-box {
+            background: var(--neutral-50);
+            padding: 24px;
+            border-radius: 12px;
+            margin-top: 32px;
+            border: 2px solid var(--neutral-100);
+        }
+
+        .contact-box h3 {
+            color: var(--brand-deep);
+            margin-bottom: 16px;
+            font-size: 1.3rem;
+        }
+
+        .contact-box p { margin-bottom: 8px; }
+
+        /* Back to Top */
+        .back-to-top {
+            position: fixed;
+            bottom: 32px;
+            right: 32px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--brand-primary), var(--brand-deep));
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 16px rgba(0,132,135,0.3);
+            transition: all var(--transition);
+            z-index: 998;
+        }
+
+        .back-to-top:hover { transform: translateY(-4px); box-shadow: 0 6px 20px rgba(0,132,135,0.4); }
+        .back-to-top.visible { display: flex; }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--neutral-900), #2d2d2d);
+            color: var(--neutral-100);
+            padding: 32px 24px;
+            margin-top: 60px;
+            position: relative;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--brand-primary), var(--accent));
+        }
+
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer-logo { color: white; text-decoration: none; }
+        .footer-logo strong { font-size: 1.1rem; }
+        .footer-logo small { opacity: 0.7; }
+
+        .footer-nav ul {
+            list-style: none;
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .footer-nav a { color: var(--neutral-100); font-weight: 500; transition: color var(--transition); }
+        .footer-nav a:hover { color: var(--accent); }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 24px auto 0;
+            padding-top: 24px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .footer-links {
+            list-style: none;
+            display: flex;
+            gap: 24px;
+        }
+
+        .footer-links a { color: var(--neutral-100); transition: color var(--transition); }
+        .footer-links a:hover { color: var(--accent); }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            main { padding: 40px 16px; margin-top: 72px; }
+            .content-container { padding: 24px; }
+            .toc-container { padding: 24px; }
+            .toc-list { grid-template-columns: 1fr; }
+            .section h2 { font-size: 1.4rem; flex-wrap: wrap; }
+            .section-number { width: 30px; height: 30px; font-size: 0.9rem; }
+            .footer-inner, .footer-bottom { flex-direction: column; text-align: center; }
+            .footer-nav ul { justify-content: center; }
+            .footer-links { justify-content: center; }
+            .back-to-top { bottom: 20px; right: 20px; width: 44px; height: 44px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="progress-bar" id="progress-bar"></div>
+
+    <header>
+        <div class="header-inner">
+            <a href="index.html" class="logo">
+                <i class="fa fa-heartbeat"></i>
+                HealthCare Plus Medical
+            </a>
+            <a href="index.html" class="btn">
+                <i class="fas fa-arrow-left"></i>
+                Back to Home
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <div class="page-header">
+            <h1>Terms of Service</h1>
+            <p class="last-updated">Last Updated: November 2025</p>
+            <p class="intro">Please read these terms carefully before using the services provided by HealthCare Plus Medical Centre. By accessing our services, you agree to be bound by these terms.</p>
+        </div>
+
+        <div class="toc-container">
+            <h2><i class="fas fa-file-contract"></i> Table of Contents</h2>
+            <ol class="toc-list">
+                <li><a href="#acceptance"><i class="fas fa-chevron-right"></i> Acceptance of Terms</a></li>
+                <li><a href="#services"><i class="fas fa-chevron-right"></i> Medical Services</a></li>
+                <li><a href="#appointments"><i class="fas fa-chevron-right"></i> Appointments & Cancellations</a></li>
+                <li><a href="#payments"><i class="fas fa-chevron-right"></i> Payments & Fees</a></li>
+                <li><a href="#patient-responsibilities"><i class="fas fa-chevron-right"></i> Patient Responsibilities</a></li>
+                <li><a href="#limitations"><i class="fas fa-chevron-right"></i> Limitations of Liability</a></li>
+                <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact Information</a></li>
+            </ol>
+        </div>
+
+        <div class="content-container">
+            <section id="acceptance" class="section">
+                <h2><span class="section-number">1</span> Acceptance of Terms</h2>
+                <p>By accessing or using the medical services provided by HealthCare Plus Medical Centre ("we," "us," "our," or "the Practice"), you acknowledge that you have read, understood, and agree to be bound by these Terms of Service.</p>
+                
+                <p>These terms apply to all patients, visitors, and users of our services, including our physical practice location and any online services we may offer.</p>
+
+                <div class="notice-box">
+                    <strong><i class="fas fa-info-circle"></i> Agreement to Terms</strong>
+                    <p>If you do not agree with any part of these terms, please discuss your concerns with our staff before proceeding with treatment. Continued use of our services constitutes acceptance of these terms.</p>
+                </div>
+
+                <h3>1.1 Changes to Terms</h3>
+                <p>We reserve the right to modify these terms at any time. Changes will be effective immediately upon posting to our website or notification at our practice. Your continued use of our services after any changes indicates your acceptance of the updated terms.</p>
+            </section>
+
+            <section id="services" class="section">
+                <h2><span class="section-number">2</span> Medical Services</h2>
+                <p>HealthCare Plus Medical Centre provides general practice medical services including but not limited to:</p>
+
+                <div class="info-cards">
+                    <div class="info-card">
+                        <div class="info-card-title"><i class="fas fa-stethoscope"></i> General Consultations</div>
+                        <p>Comprehensive medical assessments, diagnosis, and treatment for various health conditions</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-card-title"><i class="fas fa-child"></i> Pediatric Care</div>
+                        <p>Specialized healthcare services for infants, children, and adolescents</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-card-title"><i class="fas fa-syringe"></i> Vaccinations</div>
+                        <p>Immunization services for children and adults, including travel vaccinations</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-card-title"><i class="fas fa-hand-holding-heart"></i> Palliative Care</div>
+                        <p>Compassionate care focused on comfort, dignity, and quality of life</p>
+                    </div>
+                </div>
+
+                <h3>2.1 Scope of Services</h3>
+                <p>Our services are limited to general practice medicine. We may refer you to specialists or emergency services when your medical needs fall outside our scope of practice or require urgent intervention.</p>
+
+                <h3>2.2 Medical Advice Disclaimer</h3>
+                <p>Information provided during consultations is specific to your individual circumstances at the time of the appointment. This information should not be considered as general medical advice applicable to other situations or individuals.</p>
+
+                <div class="warning-box">
+                    <strong><i class="fas fa-exclamation-triangle"></i> Emergency Services</strong>
+                    <p>Our practice is not an emergency facility. In case of a medical emergency, please call emergency services immediately or go to your nearest emergency room.</p>
+                </div>
+            </section>
+
+            <section id="appointments" class="section">
+                <h2><span class="section-number">3</span> Appointments & Cancellations</h2>
+                
+                <h3>3.1 Booking Appointments</h3>
+                <p>Appointments can be made by:</p>
+                <ul>
+                    <li>Calling our practice during business hours</li>
+                    <li>Using our online booking system (if available)</li>
+                    <li>Visiting our practice in person</li>
+                </ul>
+
+                <h3>3.2 Cancellation Policy</h3>
+                <p>We understand that circumstances change. However, to ensure we can serve all our patients effectively:</p>
+                <ul>
+                    <li><strong>24-Hour Notice:</strong> Please provide at least 24 hours notice for cancellations</li>
+                    <li><strong>Late Cancellations:</strong> Cancellations with less than 24 hours notice may incur a fee</li>
+                    <li><strong>No-Shows:</strong> Failure to attend without notice may result in a missed appointment fee</li>
+                    <li><strong>Repeated No-Shows:</strong> Patients who repeatedly miss appointments may be asked to prepay for future bookings</li>
+                </ul>
+
+                <h3>3.3 Late Arrivals</h3>
+                <p>If you arrive more than 15 minutes late for your appointment, we may need to reschedule to avoid delays for other patients. Please contact us if you are running late.</p>
+
+                <div class="notice-box">
+                    <strong><i class="fas fa-clock"></i> Appointment Duration</strong>
+                    <p>Standard consultations are scheduled for 15-20 minutes. If you require a longer appointment for multiple concerns, please request an extended consultation when booking.</p>
+                </div>
+            </section>
+
+            <section id="payments" class="section">
+                <h2><span class="section-number">4</span> Payments & Fees</h2>
+                
+                <h3>4.1 Payment Terms</h3>
+                <p>Payment is due at the time of service unless prior arrangements have been made. We accept:</p>
+                <ul>
+                    <li>Cash</li>
+                    <li>Credit and debit cards</li>
+                    <li>Direct insurance billing (for participating plans)</li>
+                    <li>Health savings accounts (HSA) and flexible spending accounts (FSA)</li>
+                </ul>
+
+                <h3>4.2 Fee Schedule</h3>
+                <p>Our fees are based on the complexity and duration of consultations. A current fee schedule is available at reception upon request. Fees are subject to change with reasonable notice.</p>
+
+                <h3>4.3 Insurance</h3>
+                <p>We work with many insurance providers. However:</p>
+                <ul>
+                    <li>Patients are responsible for understanding their insurance coverage</li>
+                    <li>Any amounts not covered by insurance are the patient's responsibility</li>
+                    <li>Pre-authorization requirements are the patient's responsibility to fulfill</li>
+                    <li>We will provide necessary documentation for insurance claims</li>
+                </ul>
+
+                <h3>4.4 Outstanding Balances</h3>
+                <p>Accounts outstanding for more than 90 days may be referred to a collection agency. Patients with outstanding balances may be required to pay in full before receiving non-urgent services.</p>
+            </section>
+
+            <section id="patient-responsibilities" class="section">
+                <h2><span class="section-number">5</span> Patient Responsibilities</h2>
+                <p>To ensure the best possible care, patients agree to:</p>
+
+                <h3>5.1 Provide Accurate Information</h3>
+                <ul>
+                    <li>Provide complete and accurate medical history</li>
+                    <li>Inform us of all medications, supplements, and treatments</li>
+                    <li>Update us on any changes to your health status</li>
+                    <li>Notify us of any allergies or adverse reactions</li>
+                </ul>
+
+                <h3>5.2 Follow Treatment Plans</h3>
+                <ul>
+                    <li>Follow prescribed treatment plans and instructions</li>
+                    <li>Take medications as directed</li>
+                    <li>Attend follow-up appointments as recommended</li>
+                    <li>Inform us if you are unable to follow treatment recommendations</li>
+                </ul>
+
+                <h3>5.3 Respectful Conduct</h3>
+                <ul>
+                    <li>Treat all staff and other patients with respect</li>
+                    <li>Refrain from abusive, threatening, or disruptive behavior</li>
+                    <li>Maintain appropriate conduct in the waiting room and consultation areas</li>
+                </ul>
+
+                <div class="warning-box">
+                    <strong><i class="fas fa-ban"></i> Zero Tolerance Policy</strong>
+                    <p>We have a zero tolerance policy for violence, abuse, or harassment directed at our staff or other patients. Such behavior may result in immediate termination of the patient relationship and removal from the premises.</p>
+                </div>
+            </section>
+
+            <section id="limitations" class="section">
+                <h2><span class="section-number">6</span> Limitations of Liability</h2>
+                
+                <h3>6.1 Medical Outcomes</h3>
+                <p>While we strive to provide the highest quality medical care:</p>
+                <ul>
+                    <li>We cannot guarantee specific medical outcomes or results</li>
+                    <li>Medical treatment involves inherent risks that will be discussed with you</li>
+                    <li>Individual results may vary based on many factors beyond our control</li>
+                </ul>
+
+                <h3>6.2 Third-Party Services</h3>
+                <p>We are not responsible for services provided by third parties, including:</p>
+                <ul>
+                    <li>Specialists to whom you are referred</li>
+                    <li>Laboratories performing diagnostic tests</li>
+                    <li>Pharmacies dispensing medications</li>
+                    <li>Hospitals or emergency services</li>
+                </ul>
+
+                <h3>6.3 Website & Online Information</h3>
+                <p>Information on our website is provided for general informational purposes only and should not be considered medical advice. Always consult with a healthcare provider for medical concerns.</p>
+
+                <div class="notice-box">
+                    <strong><i class="fas fa-balance-scale"></i> Governing Law</strong>
+                    <p>These terms are governed by the laws of the United States. Any disputes will be resolved in accordance with applicable local, state, and federal laws.</p>
+                </div>
+            </section>
+
+            <section id="contact" class="section">
+                <h2><span class="section-number">7</span> Contact Information</h2>
+                <p>If you have any questions about these Terms of Service, please contact us:</p>
+
+                <div class="contact-box">
+                    <h3>HealthCare Plus Medical Centre</h3>
+                    <p><strong>Address:</strong> 123 Main Street, Downtown, Springfield, 10001, United States</p>
+                    <p><strong>Phone:</strong> <a href="tel:+15551234567">+1 (555) 123-4567</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:info@healthcareplus.com">info@healthcareplus.com</a></p>
+                    <p><strong>Hours:</strong> Monday – Thursday: 9:00 – 13:00 / 15:00 – 17:00<br>
+                    Friday: 9:00 – 12:00 / 15:00 – 17:00<br>
+                    Saturday: 9:00 – 12:00<br>
+                    Sunday: Closed</p>
+                </div>
+
+                <div class="success-box" style="margin-top: 24px;">
+                    <strong><i class="fas fa-handshake"></i> Our Commitment</strong>
+                    <p>At HealthCare Plus Medical Centre, we are committed to providing compassionate, high-quality medical care. These terms help ensure a positive experience for all our patients while maintaining the standards necessary for excellent healthcare delivery.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <footer>
+        <div class="footer-inner">
+            <a href="index.html" class="footer-logo">
+                <strong>Dr Sarah Mitchell</strong><br>
+                <small>HealthCare Plus Medical Centre</small>
+            </a>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="footer-bottom">
+            <div class="legal">© <span id="year"></span> HealthCare Plus Medical Centre</div>
+            <ul class="footer-links">
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms of Service</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById('progress-bar').style.width = scrolled + '%';
+        });
+
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            backToTop.classList.toggle('visible', window.pageYOffset > 300);
+        });
+        backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        });
+    </script>
+</body>
+</html>

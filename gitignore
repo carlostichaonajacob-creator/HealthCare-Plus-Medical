@@ -1,0 +1,114 @@
+# ================================
+# HealthCare Plus - .gitignore
+# ================================
+
+# ----- OS Generated Files -----
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ----- IDE / Editor -----
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+*~
+.project
+.settings/
+.classpath
+*.code-workspace
+
+# ----- Node.js -----
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+.npm
+.yarn-integrity
+
+# ----- Build / Compiled -----
+dist/
+build/
+out/
+*.min.css
+*.min.js
+*.map
+
+# ----- Environment Variables -----
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+.env*.local
+*.local
+
+# ----- Logs -----
+logs/
+*.log
+npm-debug.log*
+
+# ----- Testing -----
+coverage/
+.nyc_output/
+
+# ----- Temporary Files -----
+tmp/
+temp/
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# ----- Cache -----
+.cache/
+.parcel-cache/
+.eslintcache
+.stylelintcache
+
+# ----- Vercel -----
+.vercel
+
+# ----- Deployment -----
+.netlify/
+.serverless/
+
+# ----- Images (optional - uncomment if using external CDN) -----
+# *.jpg
+# *.jpeg
+# *.png
+# *.gif
+# *.svg
+# *.ico
+# *.webp
+
+# ----- Archives -----
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# ----- Sensitive Files -----
+*.pem
+*.key
+*.cert
+*.crt
+secrets.json
+credentials.json
+
+# ----- Documentation Build -----
+docs/_build/
+
+# ----- Misc -----
+*.orig
+*.rej
+.history/

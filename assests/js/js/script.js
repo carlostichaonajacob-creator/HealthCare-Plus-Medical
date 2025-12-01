@@ -14,7 +14,6 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeHeaderShadow();
     initializeScrollAnimations();
     initializeFormSubmission();
-    initializeButtonRipple();
 });
 
 // ===================================
@@ -327,4 +326,5 @@ if (typeof module !== 'undefined' && module.exports) {
         debounce,
         throttle
     };
+
 }
